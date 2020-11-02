@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+   
+    <!-- <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+
+
+    
+</head>
+<body>
+   
+    
+
+
+    <div class="container">
+        <h1 class="mb-4">Car Finder</h1>
+    </div>
+
+
+    <div class="container mb-5 mt-3">
+
+            
+        <table id="dtBasicExample" class="table table-striped table-bordered mydatatable" cellspacing="0" width="100%">
+ 
+        <thead>
+       
+
+
+
+
+    <tr>
+    <th class="th-sm">Car Name</th>
+    <th class="th-sm">Horse Power</th>
+    <th class="th-sm">Origin</th>
+    <th class="th-sm">Weight</th>
+    <th class="th-sm">Model</th>
+    </tr>
+</thead>
+ 
+
+<tbody>
+    <% for (var j = 0; j<406 ; j++){ %>      
+        <tr>
+            <td><%= results[j].Car %></td>
+            
+            <td><%= results[j].Horsepower %></td>
+         
+            <td><%= results[j].Origin %></td> 
+
+            <td><%= results[j].Weight %></td>
+            
+            <td><%= results[j].Model %></td>
+           
+                
+        </tr>  
+           
+    <% } %>
+</tbody>
+
+
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+<!-- 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+    
+    $('.mydatatable').DataTable({
+        order: [[3 , 'desc']],
+        lengthMenu: [[15,20,35,50,-1] , [15,20,35,50,"All"]]
+    });
+
+</script>
+
+
+</body>
+</html>
